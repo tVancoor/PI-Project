@@ -11,7 +11,7 @@ public class enemyFire : MonoBehaviour
 
     //Firing speed set up
     public float nextFire = 1.0f;
-    public float currentTime = 0.0f;
+    public float currentTime = 0.0f;    
 
     // Start is called before the first frame update
     void Start()
@@ -33,9 +33,9 @@ public class enemyFire : MonoBehaviour
         {
             nextFire += currentTime;
 
-            Instantiate(projectile, projectileSpawn.position, Quaternion.identity); //creates the projectile
+            Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation); //creates the projectile            
             nextFire -= currentTime;
             currentTime = 0.0f;
-        }
+        }        
     }
 }

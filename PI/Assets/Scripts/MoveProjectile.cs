@@ -21,11 +21,5 @@ public class MoveProjectile : MonoBehaviour
         projectile.velocity = transform.up * moveSpeed;
         Debug.Log(transform.forward);
     }
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.name == "DemoBoss")
-        {
-            col.gameObject.SetActive(false);
-        }
-    }
+    
 }

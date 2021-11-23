@@ -13,9 +13,12 @@ GameObject:
   - component: {fileID: 5733343701118460550}
   - component: {fileID: -7588067043973090469}
   - component: {fileID: 1060384045803982898}
+  - component: {fileID: 21413620996427259}
+  - component: {fileID: 1597264245273314745}
+  - component: {fileID: 3086803158535502210}
   m_Layer: 9
   m_Name: E.Projectile
-  m_TagString: Untagged
+  m_TagString: EShot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,11 +113,11 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2236055414565897310}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -136,4 +139,133 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 0}
-  moveSpeed: 15
+  moveSpeed: 50
+--- !u!114 &21413620996427259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2236055414565897310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1465209106, guid: c8d0ad23af520fe46aabe2b1fecf6462, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
+--- !u!114 &1597264245273314745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2236055414565897310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -57143145, guid: a040fb66244a7f54289914d98ea4ef7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"Damage","summary":null,"pan":{"x":-40.7693,"y":-315.4928},"zoom":0.8,"elements":[{"defaultValues":{},"position":{"x":335.0,"y":16.0},"guid":"9f2275f3-fb59-4e07-a20b-50e00b6e91a7","$version":"A","$type":"Bolt.GenericSubtract","$id":"10"},{"chainable":false,"member":{"name":"IgnoreCollision","parameterTypes":["UnityEngine.Collider2D","UnityEngine.Collider2D","System.Boolean"],"targetType":"UnityEngine.Physics2D","targetTypeName":"UnityEngine.Physics2D","$version":"A"},"defaultValues":{"%collider1":null,"%collider2":null,"%ignore":{"$content":true,"$type":"System.Boolean"}},"position":{"x":-58.0,"y":-306.0},"guid":"6157d874-9fdf-4228-a60c-4f08b02bda07","$version":"A","$type":"Bolt.InvokeMember","$id":"12"},{"chainable":false,"member":{"name":"CompareTag","parameterTypes":["System.String"],"targetType":"UnityEngine.GameObject","targetTypeName":"UnityEngine.GameObject","$version":"A"},"defaultValues":{"target":null,"%tag":{"$content":"Player","$type":"System.String"}},"position":{"x":119.0,"y":-133.0},"guid":"7b7ee4c4-1e94-4e98-b7a0-48733fd4d930","$version":"A","$type":"Bolt.InvokeMember","$id":"15"},{"chainable":false,"member":{"name":"Destroy","parameterTypes":["UnityEngine.Object","System.Single"],"targetType":"UnityEngine.GameObject","targetTypeName":"UnityEngine.GameObject","$version":"A"},"defaultValues":{"%obj":{"$content":0,"$type":"UnityEngine.Object"},"%t":{"$content":0.0,"$type":"System.Single"}},"position":{"x":676.0,"y":-138.0},"guid":"347a7154-7140-407f-b99c-e75977a3fd77","$version":"A","$type":"Bolt.InvokeMember","$id":"18"},{"kind":"Scene","defaultValues":{"name":{"$content":"PHP","$type":"System.String"}},"position":{"x":483.0,"y":-136.0},"guid":"029d6b46-0c80-4892-9f9a-c9ee5894fe0d","$version":"A","$type":"Bolt.SetVariable","$id":"21"},{"type":"UnityEngine.Collider2D","instance":true,"static":true,"defaultValues":{"target":null},"position":{"x":-120.0,"y":-52.0},"guid":"ced902b1-9c78-43f0-86d2-21cfbc116a64","$version":"A","$type":"Bolt.Expose","$id":"23"},{"coroutine":false,"defaultValues":{},"position":{"x":-296.0,"y":-438.0},"guid":"97188066-ce3c-4196-a6bb-d31f7416d1e1","$version":"A","$type":"Bolt.Start","$id":"25"},{"defaultValues":{},"position":{"x":322.0,"y":-133.0},"guid":"8ca64b58-14fd-44d3-9890-6564af2401fa","$version":"A","$type":"Bolt.Branch","$id":"27"},{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-407.0,"y":-135.0},"guid":"fefcef75-8a9e-42ad-bb6e-e9fa213093a0","$version":"A","$type":"Bolt.OnCollisionEnter2D","$id":"29"},{"type":"UnityEngine.PolygonCollider2D","value":{"$content":1,"$type":"UnityEngine.Object"},"defaultValues":{},"position":{"x":-352.0,"y":-342.0},"guid":"fb224b5d-a349-4532-9de9-84e4d66f83be","$version":"A","$type":"Bolt.Literal","$id":"31"},{"type":"UnityEngine.CapsuleCollider2D","value":{"$content":2,"$type":"UnityEngine.Object"},"defaultValues":{},"position":{"x":-351.0,"y":-246.0},"guid":"1fbb9f90-427b-443b-a342-549ba2a64b1c","$version":"A","$type":"Bolt.Literal","$id":"33"},{"type":"System.Int32","value":{"$content":10,"$type":"System.Int32"},"defaultValues":{},"position":{"x":185.0,"y":119.0},"guid":"cb94fe32-8fa6-4918-a71e-1994679b7f7a","$version":"A","$type":"Bolt.Literal","$id":"35"},{"specifyFallback":false,"kind":"Scene","defaultValues":{"name":{"$content":"PHP","$type":"System.String"}},"position":{"x":158.0,"y":17.0},"guid":"58cfc036-e13a-472f-a006-07289d6b13ed","$version":"A","$type":"Bolt.GetVariable","$id":"37"},{"sourceUnit":{"$ref":"25"},"sourceKey":"trigger","destinationUnit":{"$ref":"12"},"destinationKey":"enter","guid":"17732551-0f82-4cfd-9ac4-ed5492113cb7","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"29"},"sourceKey":"trigger","destinationUnit":{"$ref":"15"},"destinationKey":"enter","guid":"9afef3fb-404c-4415-b09f-7f51b29e8d29","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"21"},"sourceKey":"assigned","destinationUnit":{"$ref":"18"},"destinationKey":"enter","guid":"dd65cb5a-b661-4ca7-966d-b562f1915d86","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"27"},"sourceKey":"ifTrue","destinationUnit":{"$ref":"21"},"destinationKey":"assign","guid":"e2370de9-c513-490b-be79-35deca6137bc","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"exit","destinationUnit":{"$ref":"27"},"destinationKey":"enter","guid":"7f363dd1-5f4c-4d07-8d76-4710f69e9568","$type":"Bolt.ControlConnection"},{"sourceUnit":{"$ref":"15"},"sourceKey":"result","destinationUnit":{"$ref":"27"},"destinationKey":"condition","guid":"ed052da6-879f-4e28-a716-df08504ee460","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"23"},"sourceKey":"gameObject","destinationUnit":{"$ref":"15"},"destinationKey":"target","guid":"9e7e7038-dcd7-47f3-b34f-9c1c41ea7529","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"29"},"sourceKey":"collider","destinationUnit":{"$ref":"23"},"destinationKey":"target","guid":"9450ba93-b2a4-4d13-9514-6bc4ffb1eb45","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"35"},"sourceKey":"output","destinationUnit":{"$ref":"10"},"destinationKey":"subtrahend","guid":"e59b1665-7fc8-447b-8440-420df6616a56","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"37"},"sourceKey":"value","destinationUnit":{"$ref":"10"},"destinationKey":"minuend","guid":"a5ddab7c-22b9-4d77-b213-c12c582519eb","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"31"},"sourceKey":"output","destinationUnit":{"$ref":"12"},"destinationKey":"%collider1","guid":"66cb0554-2e7b-413d-a846-680d4b8ed58e","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"10"},"sourceKey":"difference","destinationUnit":{"$ref":"21"},"destinationKey":"input","guid":"bdccff7f-5d42-4ad0-8775-c0ddb9c80412","$type":"Bolt.ValueConnection"},{"sourceUnit":{"$ref":"33"},"sourceKey":"output","destinationUnit":{"$ref":"12"},"destinationKey":"%collider2","guid":"83e6c37f-84d9-4669-9d03-f83b98c5894c","$type":"Bolt.ValueConnection"}],"$version":"A"}}}'
+    _objectReferences:
+    - {fileID: 2236055414565897310}
+    - {fileID: 9156217652555721128, guid: 69135ee3823679c4496821a37ed0ab2c, type: 3}
+    - {fileID: 5733343701118460550}
+--- !u!82 &3086803158535502210
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2236055414565897310}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b898dece2dc165c438d7613c59445120, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.25
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

@@ -16,14 +16,8 @@ public class EnemyProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        projectile.velocity = new Vector2(0, -1) * moveSpeed;
-        
+        projectile.velocity = transform.up * moveSpeed;
+
     }
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            col.gameObject.SetActive(false);
-        }
-    }
+    
 }
