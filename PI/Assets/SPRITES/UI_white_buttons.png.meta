@@ -17,6 +17,12 @@ TextureImporter:
   - first:
       213: -8703130251484191090
     second: UI_white_buttons_4
+  - first:
+      213: -4774881453884916298
+    second: UI_white_buttons_5
+  - first:
+      213: -2681477287453485825
+    second: UI_white_buttons_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -198,7 +204,7 @@ TextureImporter:
         width: 16
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -206,6 +212,48 @@ TextureImporter:
       bones: []
       spriteID: e86245eb525483780800000000000000
       internalID: -8703130251484191090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_white_buttons_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 33
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdb698bd963cbdb0800000000000000
+      internalID: -4774881453884916298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_white_buttons_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 65
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff49e083d9a79cad0800000000000000
+      internalID: -2681477287453485825
       vertices: []
       indices: 
       edges: []
